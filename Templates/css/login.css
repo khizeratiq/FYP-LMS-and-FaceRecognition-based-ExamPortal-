@@ -1,0 +1,70 @@
+body{
+    background: linear-gradient(10deg, rgba(242,158,158,1) 2%, rgba(114,158,200,1) 58%, rgba(132,199,191,1) 91%);
+    height: 100vh;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: #ffb600;
+}
+.form-logo{
+    width: 160px;
+    margin: 20px 0px;
+}
+.login-form{
+    background-image: linear-gradient(to right,#015495,#19BDD3);
+    padding: 0px 50px 70px 50px;
+    color:white;
+    margin: 10% auto;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+
+.signup-form{
+    background-image: linear-gradient(to right,#015495,#19BDD3);
+    padding: 0px 30px 20px 30px;
+    color:white;
+    margin: 10px auto;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+.teacher-form{
+    background-image: linear-gradient(to right,#015495,#19BDD3);
+    padding: 0px 30px 20px 30px;
+    color:white;
+    margin:10px auto;
+    height: fit-content;
+    border-radius: 15px;
+}
+ .login-row{
+     margin-top: 40px;
+ }
+.form-field-div{
+    margin: 10px 0px;
+}
+
+.login-btn{
+    
+    background-color: #ffb600;
+    border:none;
+    color:white;
+    padding:10px 50px; 
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.login-btn:hover{
+    background-color: #dcb24a;
+    transition: 0.5s ease-in-out;
+}
+
+
+.login-heading{
+    color:white;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/richtexteditor/rte_theme_default.css" /> -->
+
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: [
+                "advlist autolink lists link image charmap print preview anchor",
+                "searchreplace visualblocks code fullscreen",
+                "insertdatetime media table contextmenu paste"
+            ],
+            paste_preprocess: function (plugin, args) {
+                console.log("Attempted to paste: ", args.content);
+                // replace copied text with empty string
+                args.content = '';
+            },
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
+    </script>
+
+    <link rel="stylesheet" href="../static/css/style1.css" />
+    <title>Exam Attempt</title>
+</head>
+
+<body>
+    <header>
+        <section class="my_navbar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <section class="attempt_exam_sec1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner_section_top_banner">
+                        <div class="course_heading">
+                            <h1>
+                                Artificial Intelligence
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="timer_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner_section_timer">
+                        <div class="heading">
+                            <h3>
+                                Time Left
+                            </h3>
+                        </div>
+                        <div id="timer">
+                            <p class="clock"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="questions_sec">
+        <div class="container">
+            <form action="">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner_section_question">
+                            <div class="question">
+                                <div class="icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="ques">
+                                    <h6>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, cupiditate quasi.
+                                        Id
+                                        blanditiis totam eveniet magnam provident voluptatibus fugit corrupti, tenetur
+                                        veniam?
+                                        Autem, aperiam inventore?
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner_section_question">
+                            <div class="question">
+                                <div class="icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="ques">
+                                    <h6>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iusto, reiciendis
+                                        temporibus ut deserunt ipsum earum doloribus dolore maxime corporis nihil fugiat
+                                        neque eligendi totam veniam. Officiis sit distinctio saepe impedit iure
+                                        doloribus non harum illum? Nemo quos eligendi mollitia recusandae et tenetur
+                                        temporibus atque placeat? Expedita incidunt alias exercitationem.
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner_section_question">
+                            <div class="question">
+                                <div class="icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="ques">
+                                    <h6>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque deserunt
+                                        blanditiis iusto corporis, totam dignissimos enim accusamus dolorum obcaecati
+                                        placeat eius ut assumenda et! Numquam facilis, alias quibusdam quas tenetur qui
+                                        rerum totam repudiandae distinctio. Incidunt reprehenderit, impedit sed,
+                                        corrupti perferendis iusto saepe fugiat omnis rerum soluta a temporibus magnam
+                                        velit quasi modi optio doloremque voluptatibus, labore aliquam. Accusantium
+                                        obcaecati modi dignissimos accusamus neque eum amet corrupti? Accusantium,
+                                        quaerat consequatur.
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner_section_question">
+                            <div class="question">
+                                <div class="icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="ques">
+                                    <h6>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quam
+                                        quisquam nemo.
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner_section_question">
+                            <div class="question">
+                                <div class="icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="ques">
+                                    <h6>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita inventore
+                                        quibusdam quis debitis delectus atque labore vel, magni eligendi? Maiores
+                                        accusantium ex recusandae libero, repellendus odit cumque sed! Voluptatum
+                                        tempora ipsum minus unde est perspiciatis impedit, sunt, obcaecati nostrum,
+                                        cumque dolorem? In dolorum beatae laudantium voluptas at reiciendis eveniet
+                                        alias minus praesentium! Tempora delectus rem quos, animi quam maxime molestias
+                                        itaque, iste dolorum in ad sit earum perferendis nisi, eveniet deleniti facilis
+                                        atque veniam omnis beatae! Amet dolor mollitia iste omnis voluptate ratione
+                                        rerum commodi laudantium reiciendis. Iure iusto optio nemo atque velit quidem
+                                        blanditiis accusamus officiis. Perferendis, a rem?
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner_section_question">
+                            <div class="question">
+                                <div class="icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="ques">
+                                    <h6>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aut excepturi.
+                                        Eos molestiae quis placeat fuga ex atque tenetur magni?
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner_section_button">
+                            <a id="btn_submit" class="btn btn_submit" href="https://imaginecup.microsoft.com/en-us/Events">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Feb 30, 2022 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+                $("#btn_submit")[0].click();
+            }
+        }, 1000);
+    </script>
+
+    <!-- <script>
+        $(document).ready(function () {
+            $('.inner_section_question .answer textarea').on("cut copy paste", function (e) {
+                e.preventDefault();
+            });
+        });
+    </script> -->
+
+    <!-- <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tinymce').bind('copy paste cut', function (e) {
+                e.preventDefault(); //disable cut,copy,paste
+                alert('cut,copy & paste options are disabled !!');
+            });
+        });
+    </script> -->
+
+    <script>
+        tinymce.init({
+            selector: "textarea",
+            plugins: [
+                "advlist autolink lists link image charmap print preview anchor",
+                "searchreplace visualblocks code fullscreen",
+                "insertdatetime media table contextmenu paste"
+            ],
+            paste_preprocess: function (plugin, args) {
+                console.log("Attempted to paste: ", args.content);
+                // replace copied text with empty string
+                args.content = '';
+            },
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
+    </script>
+
+    <!-- <script type="text/javascript">
+        $(document).ready(function () {
+            //Disable full page
+            // $(this).bind('cut copy paste', function (e) {
+            //     e.preventDefault();
+            // });
+
+            //Disable part of page
+            // $('.inner_section_question .answer textarea').bind('cut copy paste', function (e) {
+            //     e.preventDefault();
+            // });
+        });
+    </script> -->
+
+
+    <!-- <script type="text/javascript" src="/richtexteditor/rte.js"></script>
+    <script type="text/javascript" src='/richtexteditor/plugins/all_plugins.js'></script>
+
+    <script>
+        var editor1 = new RichTextEditor("#answer");
+        //editor1.setHTMLCode("Use inline HTML or setHTMLCode to init the default content.");
+    </script> -->
+
+
+</body>
+
+</html>
