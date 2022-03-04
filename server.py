@@ -11,6 +11,34 @@ app = Flask(__name__)
 def index():  #index ki jaga pehly ajax tha
   return render_template('index.html')
 
+@app.route('/student-dashboard')
+def studentDashboard():  
+  return render_template('student-dashboard.html')
+
+@app.route('/teacher-dashboard')
+def teacherDashboard():  
+  return render_template('teacher-dashboard.html')
+
+@app.route('/admin-dashboard')
+def adminDashboard():  
+  return render_template('admin-dashboard.html')  
+
+@app.route('/attempt-exam')
+def attemptExam():  
+  return render_template('attempt-exam.html')
+
+@app.route('/organization-registration')
+def organizationRegistration():  
+  return render_template('organization-registration.html')
+
+@app.route('/register-student')
+def registerStudent():  
+  return render_template('register-student.html')
+
+@app.route('/register-teacher')
+def registerTeacher():  
+  return render_template('register-teacher.html')
+
 @app.route('/courses')
 def courses():  
   return render_template('courses.html')
@@ -30,7 +58,7 @@ def signup():
 @app.route('/SomeFunction')
 def SomeFunction():
     print('In SomeFunction')
-    os.system('python C:\\Users\\khize\\Desktop\\FYP_FaceRecognition\\FlaskApp\\AttendanceProject.py')
+    os.system('python C:\\Users\\khize\\Desktop\\CognED\\FYP\\FlaskApp\\AttendanceProject.py')
     
     return "Nothing"
 
