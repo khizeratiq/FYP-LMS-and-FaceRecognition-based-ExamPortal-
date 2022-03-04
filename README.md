@@ -4,14 +4,16 @@
 
 2- create virtual environment in python
 
-3- install all the libraries available in requirments.txt file
+3- to create virtual environment in python "python -m venv (path to environment)" 
 
-4- open project in visual studio code
+4- install all the libraries available in requirments.txt file
 
-5- set python interpreter as the virtual environment you created
+5- open project in visual studio code
 
-6- run server.py script (make sure virtual environment is activated)
+6- set python interpreter as the virtual environment you created
 
-7- copy paste the link generated in terminal of visual studio code on    your browser
+7- run server.py script (make sure virtual environment is activated)
 
-8- then you can explore the face detection tool of our project. 
+8- copy paste the link generated in terminal of visual studio code on    your browser
+
+9- then you can explore the face detection tool of our project. 
