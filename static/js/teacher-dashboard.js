@@ -37,7 +37,7 @@ $.ajax({
                   
 
                 <td>
-                <a href="../course_detail.html?${el.id}" target="_blank">   <button class="admin-dashboard-button-2ndsec">
+                <a href="../course_detail?${el.id}" target="_blank">   <button class="admin-dashboard-button-2ndsec">
                 View Course Details
                   </button> </a> 
   

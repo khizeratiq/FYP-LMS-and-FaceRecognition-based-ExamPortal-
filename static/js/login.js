@@ -45,11 +45,11 @@ window.onload = function(){
                 localStorage.setItem('login-details', JSON.stringify(user));
     
                 if(user.user.role.name === 'Student'){
-                    window.location.href = 'student-dashboard.html'
+                    window.location.href = 'student-dashboard'
                 } else if(user.user.role.name === 'Teacher'){
-                    window.location.href = 'teacher-dashboard.html'
+                    window.location.href = 'teacher-dashboard'
                 } else if(user.user.role.name === 'Admin'){
-                    window.location.href = `../admin-dashboard.html`
+                    window.location.href = 'admin-dashboard'
                 }
                 
                 
