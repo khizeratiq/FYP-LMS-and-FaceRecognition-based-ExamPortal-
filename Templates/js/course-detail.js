@@ -14,7 +14,22 @@ $.ajax({
     
   }).done(function (msg) {
 
-    console.log(msg);
+    console.log("course" , msg);
+    msg.students.map((el) => {
+      $('#student-table-coursedetails').append(
+        
+        `
+         <tr>
+        <td>${el.id}</td>
+        <td>${el.studentName}</td>
+        <td>${el.studentRegNo}</td>
+        <td style="color:green;">yes</td>
+      </tr> 
+        `
+      )
+
+    })
+
     document.getElementById('course-title').innerHTML = msg.courseName;
     document.getElementById('course-title2').innerHTML = msg.courseName;
     document.getElementById('course-description').innerHTML = msg.courseDetail;

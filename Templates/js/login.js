@@ -59,6 +59,7 @@ window.onload = function(){
                 var errorMessage = eval("(" + xhr.responseText + ")");
                 $("#error").html(errorMessage.message)
                 console.log('Error - ' + errorMessage.message);
+                window.alert("invalid credentials")
           })
     
         })

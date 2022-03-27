@@ -22,11 +22,12 @@ $.ajax({
             <div class="col-sm-6 col-md-4">
         <div class="course margin_top wow fadeIn" data-wow-delay="400ms">
           <div class="image bottom25">
-            <img src="./assets/imgs/coursethumbnail1.jpg" alt="Course" class="border_radius">
+          <img src="${el.featuredImage ? `http://localhost:1337${el.featuredImage.url} ` : ''}" alt="Course" class="border_radius">
+         
           </div>
           <h3 class="bottom10"><a href="course_detail.html">${el.courseName}</a></h3>
           <p class="bottom20">${el.courseDetail.substring(0,120)}</p>
-          <a class="btn_common yellow border_radius" href="course_detail.html?${el.id}" target="_blank">view details</a>
+          <a class="btn_common yellow border_radius" href="../course_detail.html?${el.id}" target="_blank">view details</a>
         </div>
       </div>
             `
