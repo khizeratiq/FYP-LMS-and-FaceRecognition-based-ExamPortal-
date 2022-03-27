@@ -23,6 +23,10 @@ def teacherDashboard():
 def adminDashboard():  
   return render_template('admin-dashboard.html')  
 
+@app.route('/newdashboard')
+def newdashboard():  
+  return render_template('newdashboard.html')  
+
 @app.route('/attempt-exam')
 def attemptExam():  
   return render_template('attempt-exam.html')
@@ -31,13 +35,21 @@ def attemptExam():
 def organizationRegistration():  
   return render_template('organization-registration.html')
 
-@app.route('/register-student')
-def registerStudent():  
-  return render_template('register-student.html')
+# @app.route('/register-student')
+# def registerStudent():  
+#   return render_template('register-student.html')
 
-@app.route('/register-teacher')
-def registerTeacher():  
-  return render_template('register-teacher.html')
+@app.route('/newregisterstudent')
+def newregisterstudent():  
+  return render_template('newregisterstudent.html')
+
+# @app.route('/register-teacher')
+# def registerTeacher():  
+#   return render_template('register-teacher.html')
+
+@app.route('/newregisterteacher')
+def newregisterteacher():  
+  return render_template('newregisterteacher.html')
 
 @app.route('/courses')
 def courses():  

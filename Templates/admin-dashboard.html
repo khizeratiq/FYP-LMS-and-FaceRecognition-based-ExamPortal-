@@ -20,7 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="../static/css/dashboard.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://springstubbe.us/projects/demos/jquery-multiselect/scripts/index.js?1523890673"></script>
     <link rel="stylesheet" href="https://springstubbe.us/projects/demos/jquery-multiselect/styles/index.css?1518818712">
@@ -308,13 +308,13 @@
                                                 <br/>
                                                  <div class="d-flex">
                                                      <div class="mr-4">
-                                                     <a href="{{url_for('register-teacher') }}" target="_blank">  <button class="admin-dashboard-button-adduser">
+                                                     <a href="{{url_for('newregisterteacher') }}" target="_blank">  <button class="admin-dashboard-button-adduser">
                                                             Add New Teacher
                                                         </button>
                                                     </a> 
                                                      </div>
                                                      <div class="ml-4">
-                                                        <a href="{{url_for('register-student') }}" target="_blank">     <button class="admin-dashboard-button-adduser">
+                                                        <a href="{{url_for('newregisterstudent') }}" target="_blank">     <button class="admin-dashboard-button-adduser">
                                                             Add New Student
                                                         </button>
                                                         </a>
