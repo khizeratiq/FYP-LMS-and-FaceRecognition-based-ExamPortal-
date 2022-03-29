@@ -10,8 +10,9 @@
     padding-right: 30px;
 }
 .inner_section1st-row{
-    background-image: linear-gradient(to right,#015495,#19BDD3);
-    padding: 60px 40px;
+    /* background-image: linear-gradient(to right,#015495,#19BDD3); */
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../assets/imgs/banner2.jpg"), no-repeat;
+    padding: 90px 40px;
     color: white;
     font-weight: 300;
 }
