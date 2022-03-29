@@ -99,7 +99,9 @@ window.onload = function(){
                   }).done(function (Student) {
                     console.log("Data Saved: ");
                     console.log(Student);
-                    window.location.href="../admin-dashboard.html";
+                   window.alert("Student added")
+                    // setTimeout(function() {window.close()}, 3000);
+                  
                     
                     
                   })

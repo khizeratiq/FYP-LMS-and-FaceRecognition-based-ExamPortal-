@@ -1,6 +1,4 @@
 var getUser = JSON.parse(localStorage.getItem('login-details'));
-document.getElementById("admin-name").innerHTML = getUser.user.username;
-document.getElementById("admin-user").innerHTML = getUser.user.email;
 
 $.ajax({
   method: "GET",
@@ -23,8 +21,9 @@ $.ajax({
   }).done(function (teachers) {
     console.log("Data Saved for teachers: ");
     console.log(teachers);
-
-
+    document.getElementById("totalteachers").innerHTML = teachers.length;
+    document.getElementById("totalteacherbanner").innerHTML = teachers.length;
+    console.log('length', teachers.length);
     teachers.map((el) => {
       $(`#teacher-table`).append(
 
@@ -53,9 +52,11 @@ $.ajax({
     dataType: "Json"
 
   }).done(function (Student) {
-    console.log("Data Saved: ");
+    console.log("Data Saved for students: ");
     console.log(Student);
-
+    document.getElementById("totalstudents").innerHTML = Student.length;
+    document.getElementById("totalstudentbanner").innerHTML = Student.length;
+    console.log('length', Student.length)
 
     Student.map((el) => {
       $(`#student-table`).append(
