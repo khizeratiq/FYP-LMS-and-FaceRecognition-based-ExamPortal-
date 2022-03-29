@@ -91,8 +91,8 @@ window.onload = function(){
                   }).done(function (Teacher) {
                     console.log("Data Saved: ");
                     console.log(Teacher);
-                    window.location.href="../admin-dashboard.html";
-                    
+                    window.alert("Teacher Added")
+                    // setTimeout(function() {window.close()}, 3000);
                   })
                   .fail(function(xhr) {
                     //Ajax request failed.
