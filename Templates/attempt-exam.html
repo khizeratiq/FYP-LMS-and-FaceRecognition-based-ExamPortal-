@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="/richtexteditor/rte_theme_default.css" /> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
@@ -38,7 +41,7 @@
     </script>
 
     <link rel="stylesheet" href="../static/css/style1.css" />
-    <title>Exam Attempt</title>
+    <title>Attempt Attempt</title>
 </head>
 
 <body>
@@ -103,8 +106,8 @@
     </section>
     <section class="questions_sec">
         <div class="container">
-            <form action="">
-                <div class="row">
+            <form class="ques_form" action="">
+                <!-- <div id="question1" class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="inner_section_question">
                             <div class="question">
@@ -242,25 +245,78 @@
                                 <textarea name="" id="" cols="30" rows="10"></textarea>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="inner_section_button">
-                            <a id="btn_submit" class="btn btn_submit" href="https://imaginecup.microsoft.com/en-us/Events">Submit</a>
-                        </div>
+                    </div>                    
+                </div> -->                
+            </form>
+            <div class="row btn_row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner_section_button">
+                        <a id="btn_submit" class="btn btn_submit"
+                            href="https://imaginecup.microsoft.com/en-us/Events">Submit</a>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
 
 
+    <div id="newdiv"></div>
 
-
-
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "questions.txt",
+                dataType: "text",
+                success: function (data) {
+                    // $("#newdiv").html(data);
+                    // var jsonData = JSON.parse(data);
+                    var array = data.split('-----');
+                    // $("#newdiv").html(array[1]);
+                    // console.log(array.length);
+                    if (array.length >= 1) {
+                        for (let step = 0; step < array.length-1; step++) {
+                            var num = step;
+                            ++num;
+                            var quesHTML =
+                                "<div id='question"+ num + "' class='row'> <div class='col-lg-12 col-md-12 col-sm-12'> <div class='inner_section_question'> <div class='question'> <div class='icon'> <i class='fas fa-question-circle'></i> </div> <div class='ques'>" + array[step] + "</div> </div> <div class='answer'> <textarea name='' id='' cols='30' rows='10'></textarea> </div> </div> </div> </div>";
+                            $('.ques_form').append(quesHTML);
+                        }
+                        tinymce.init({
+                            selector: "textarea",
+                            plugins: [
+                                "advlist autolink lists link image charmap print preview anchor",
+                                "searchreplace visualblocks code fullscreen",
+                                "insertdatetime media table contextmenu paste"
+                            ],
+                            paste_preprocess: function (plugin, args) {
+                                console.log("Attempted to paste: ", args.content);
+                                // replace copied text with empty string
+                                args.content = '';
+                            },
+                            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+                        });
+                    } else {
+                        var quesHTML =
+                        "<div id='error' class='row mt-5'> <div class='col-lg-12 col-md-12 col-sm-12'> <h3>No Questions Found</h3> </div> </div>";
+                    $('.ques_form').append(quesHTML);
+                    $('.timer_section').css('display', 'none');
+                    $('.btn_row').css('display', 'none');
+                    }
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    var quesHTML =
+                        "<div id='error' class='row mt-5'> <div class='col-lg-12 col-md-12 col-sm-12'> <h3>No Questions Found</h3> </div> </div>";
+                    $('.ques_form').append(quesHTML);
+                    $('.timer_section').css('display', 'none');
+                    $('.btn_row').css('display', 'none');
+                }
+            });
+        });
+    </script>
 
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("Feb 30, 2022 00:00:00").getTime();
+        var countDownDate = new Date("Mar 30, 2022 00:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function () {
