@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/dashboard.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Student Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <section class="my_navbar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Courses</a>
+                            </li>
+                            <li class="nav-item logout">
+                                <a class="nav-link logout-btn" href="#">Logout</a>
+                            </li>
+                            <li class="nav-item login">
+                                <a class="nav-link" href="{{url_for('login') }}">login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <section class="adminDashSec1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 p-0">
+                    <div class="inner_section1st-row">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div
+                                    class="firstdiv-inner-1st-content d-flex justify-content-evenly align-items-center">
+                                    <div class="pr-4">
+                                        <i class="fa fa-clock icons-admin"></i>
+                                    </div>
+                                    <div>
+
+                                        <h4 class="p-0 m-0"> Welcome Back,<span id="student-name">Student!</span></h4>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <div>
+                                    <p class="section1-courses-heading">
+                                        Total Courses
+                                    </p>
+                                    <p class="section1-courses-number">
+                                        10
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <div>
+                                    <p class="section1-courses-heading">
+                                        Enrolled Courses
+                                    </p>
+                                    <p class="section1-courses-number">
+                                        8
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2nd section -->
+    <section class="admin-dashboard-section2-card">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner_section2nd-row">
+                        <div class="row justify-content-between">
+                            <!-- <div class="col-lg-8 col-md-8 col-sm-12">
+                                <div class="p-2 d-flex justify-content-between align-items-center">
+                                    <div class="pr-4">
+                                        <h4> My Account </h4>
+                                    </div>
+                                    <div>
+
+                                        <button onclick="getData()" class="admin-dashboard-button-2ndsec">
+                                            View Course Details
+                                        </button>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="section2-main-inner-sec-div">
+                                    <table class="table table-hover">
+                                        <thead style="text-align: center;">
+                                            <tr>
+                                                <th scope="col">Course Id</th>
+                                                <th scope="col">Course Name</th>
+                                                <th scope="col">Course Description</th>
+                                            
+                                                <th scope="col">Course Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="text-align: center;" id="student-table-details">
+                                                <tr>
+                                                <td>1</td>
+                                                <td>Statistics</td>
+                                                <td>43424</td>
+                                                <td>Daood Abbasi</td>
+                                                <td>
+                                                    <button class="admin-dashboard-button-2ndsec">
+                                                        View Course Details
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Cryptography</td>
+                                                <td>13441</td>
+                                                <td>Yasir Ahmed</td>
+                                                <td>
+                                                    <button class="admin-dashboard-button-2ndsec">
+                                                        View Course Details
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Data Structures</td>
+                                                <td>234234</td>
+                                                <td>Israr Ali</td>
+                                                <td>
+                                                    <button class="admin-dashboard-button-2ndsec">
+                                                        View Course Details
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4 </td>
+                                                <td>Object Oriented Programming</td>
+                                                <td>33342</td>
+                                                <td>Sophia Ajaz</td>
+                                                <td>
+                                                    <button class="admin-dashboard-button-2ndsec">
+                                                        View Course Details
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5 </td>
+                                                <td>Digital Logic Design</td>
+                                                <td>33242</td>
+                                                <td>Ilyas Younis</td>
+                                                <td>
+                                                    <button class="admin-dashboard-button-2ndsec">
+                                                        View Course Details
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6 </td>
+                                                <td>Digital Logic Design</td>
+                                                <td>33242</td>
+                                                <td>Ilyas Younis</td>
+                                                <td>
+                                                    <button class="admin-dashboard-button-2ndsec">
+                                                        View Course Details
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7 </td>
+                                                <td>Digital Logic Design</td>
+                                                <td>33242</td>
+                                                <td>Ilyas Younis</td>
+                                                <td>
+                                                    <button class="admin-dashboard-button-2ndsec">
+                                                        View Course Details
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>8 </td>
+                                                <td>Digital Logic Design</td>
+                                                <td>33242</td>
+                                                <td>Ilyas Younis</td>
+                                                <td>
+                                                    <button class="admin-dashboard-button-2ndsec">
+                                                        View Course Details
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9 </td>
+                                                <td>Digital Logic Design</td>
+                                                <td>33242</td>
+                                                <td>Ilyas Younis</td>
+                                                <td>
+                                                    <button class="admin-dashboard-button-2ndsec">
+                                                        View Course Details
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div> -->
+                    
+                    <div class="col-md-8 col-sm-12">
+                        <div class="inner_section_courses">
+                            <div class="main_heading">
+                                <h3>Courses</h3>
+                            </div>
+                            <div class="courses">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="profile-card-admin-dashboard">
+                                    <div class="card">
+                                        <div class="profile-card-image-div">
+                                            <img class="profile-image-dashboard"
+                                                src="../static/assets/imgs/profile-image.jpg" />
+
+                                        </div>
+                                        <div class="profile-details-dashboard">
+                                            <h4 class="p-0 m-0" id="student-user"> Student </h4>
+                                            <p class="text-muted">
+                                                Karachi - Pakistan
+                                            </p>
+                                            <a href="#">
+                                                User Settings
+                                            </a>
+                                        </div>
+                                        <div class="card-body profile-details-div-outer">
+                                            <div class="profile-div-details-course d-flex justify-content-center">
+                                                <div class="profile-details-card-inner"
+                                                    style="border-right: 1px solid #cfcfcf;">
+
+                                                    <h4 id="courses-enrolled">10</h4>
+                                                    <p class="text-muted"> Total Course</p>
+                                                </div>
+                                                <div class="profile-details-card-inner">
+                                                    <h4>9</h4>
+                                                    <p class="text-muted"> Total Course</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="profile-div-notification-bar">
+                                                <h4>
+                                                    Notifications
+                                                </h4>
+                                                <br />
+                                                <!-- <p> <a href="#">
+                                                        Assignments
+                                                    </a>
+                                                </p> <br />
+
+                                                <p> <a href="#">
+                                                        Quizzes
+                                                    </a>
+                                                </p> <br /> -->
+                                                <p> <a href="#">
+                                                        Exams
+                                                    </a>
+                                                </p> <br />
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="{{ url_for('static',filename='js/student-dashboard.js') }}">
+
+    </script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/logout.js') }}">
+
+    </script>
+</body>
+
+</html>

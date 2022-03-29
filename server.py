@@ -35,6 +35,10 @@ def attemptExam():
 def organizationRegistration():  
   return render_template('organization-registration.html')
 
+@app.route('/student_exam')
+def studentExam():  
+  return render_template('student_exam.html')
+
 # @app.route('/register-student')
 # def registerStudent():  
 #   return render_template('register-student.html')
