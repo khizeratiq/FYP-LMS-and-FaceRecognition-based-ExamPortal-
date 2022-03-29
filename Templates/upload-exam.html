@@ -30,7 +30,9 @@
             for (let step = 0; step < count; step++) {
                 // Runs equals to the number of questions times.
                 questions += tinymce.get("mce_" + step).getContent();
-                questions += "\n\n\n";
+                questions += "\n";
+                questions += "-----";
+                questions += "\n";
             }
             // var myContent = tinymce.get("mce_0").getContent();
             var blob = new Blob([questions], {
@@ -41,7 +43,7 @@
     </script>
 
     <link rel="stylesheet" href="../static/css/style1.css" />
-    <title>Exam Attempt</title>
+    <title>Upload Attempt</title>
 </head>
 
 <body class="upload_exam">
@@ -162,11 +164,11 @@
                         "searchreplace visualblocks code fullscreen",
                         "insertdatetime media table contextmenu paste"
                     ],
-                    paste_preprocess: function (plugin, args) {
-                        console.log("Attempted to paste: ", args.content);
-                        // replace copied text with empty string
-                        args.content = '';
-                    },
+                    // paste_preprocess: function (plugin, args) {
+                    //     console.log("Attempted to paste: ", args.content);
+                    //     // replace copied text with empty string
+                    //     args.content = '';
+                    // },
                     toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
                 });
             });
