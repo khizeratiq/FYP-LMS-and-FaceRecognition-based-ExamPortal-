@@ -27,7 +27,7 @@ $.ajax({
           </div>
           <h3 class="bottom10"><a href="course_detail.html">${el.courseName}</a></h3>
           <p class="bottom20">${el.courseDetail.substring(0,120)}</p>
-          <a class="btn_common yellow border_radius" href="../course_detail.html?${el.id}" target="_blank">view details</a>
+          <a class="btn_common yellow border_radius" href="#">view details</a>
         </div>
       </div>
             `

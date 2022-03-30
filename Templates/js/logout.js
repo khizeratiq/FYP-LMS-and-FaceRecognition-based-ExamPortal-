@@ -10,6 +10,7 @@ $(function(){
         $('.login').show()
     }
     $(".logout-btn").click(function(){localStorage.removeItem('login-details');
+
     window.location.href="../login.html";
 
     

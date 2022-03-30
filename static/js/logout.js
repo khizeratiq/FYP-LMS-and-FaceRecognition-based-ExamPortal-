@@ -1,6 +1,8 @@
 $(function(){
     var user = JSON.parse(localStorage.getItem('login-details'));
     console.log(user)
+    // setInterval(() => {$('.loader2').hide() ; console.log('run')} , 6)
+    // console.log('run')
     if(user){
         $('.logout').show()
         $('.login').hide()
@@ -10,6 +12,7 @@ $(function(){
         $('.login').show()
     }
     $(".logout-btn").click(function(){localStorage.removeItem('login-details');
+    
     window.location.href="../login";
 
     

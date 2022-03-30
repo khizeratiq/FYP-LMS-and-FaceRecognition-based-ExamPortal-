@@ -28,7 +28,7 @@ window.onload = function(){
         $("#login").submit(function(e){
             e.preventDefault();
             console.log("This")
-    
+            $('.loader').show();
             const bodyLogin = {
                 identifier: userEmail,
                 password: password
@@ -40,7 +40,7 @@ window.onload = function(){
               }).done(function (user) {
                 console.log("Data Saved: ");
                 console.log(user);
-    
+                    $('.loader').hide();
                 
                 localStorage.setItem('login-details', JSON.stringify(user));
     
@@ -60,6 +60,8 @@ window.onload = function(){
                 $("#error").html(errorMessage.message)
                 console.log('Error - ' + errorMessage.message);
                 window.alert("Invalid Credentials");
+                $('.loader').hide();
+                
           })
     
         })

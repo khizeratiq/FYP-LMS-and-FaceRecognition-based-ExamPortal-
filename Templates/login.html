@@ -23,18 +23,18 @@
                     </h2>
                        <div class="form-field-div">
                          <label for="username" class="form-label">Username/Email</label>
-                         <input type="text" class="form-control" id="username" />
+                         <input type="text" class="form-control"  required  id="username" />
                        </div>
                        <div class="form-field-div">
-                         <label for="password" class="form-label">Password</label>
-                         <input type="password" class="form-control" id="password" />
+                         <label for="password" class="form-label" >Password</label>
+                         <input type="password" class="form-control" required id="password" />
                        </div>
                        <div class="form-field-div">
                          <input type="checkbox" class="form-check-input" id="remember" />
                          <label for="remember" class="form-label">Remember Me</label>
                        </div>
                        <div class="form-field-div">
-                         <button class="login-btn" type="submit" class="btn text-light main-bg" onclick="spinner()">Login</button>
+                         <button class="btn text-light main-bg login-btn" type="submit">Login</button>
                        </div>
                        <div>
                            Don't have an account?<a href="{{url_for('signup') }}">Signup</a>
@@ -53,11 +53,6 @@
  <script type="text/javascript" src="{{ url_for('static',filename='js/login.js') }}">
 
 </script>
-<script type="text/javascript">
-  function spinner() {
-    document.getElementsByClassName("loader")[0].style.display = "block";
-   
-  }
-</script>
+
 </body>
 </html>
